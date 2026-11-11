@@ -1,0 +1,239 @@
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+  Chip,
+  Alert,
+  CircularProgress,
+} from '@mui/material';
+import Grid from '@mui/material/Grid';
+import {
+  ContactPage as ContactIcon,
+  Assignment as TaskIcon,
+  Folder as ProjectIcon,
+  Rocket as RocketIcon,
+  Code as CodeIcon,
+  Security as SecurityIcon,
+} from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router';
+import DatabaseSetupGuide from '../components/DatabaseSetupGuide';
+import { useHealthCheck } from '../hooks';
+
+const Home = () => {
+  const { status, stats, retry } = useHealthCheck();
+
+  if (status === 'error') {
+    return (
+      <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <DatabaseSetupGuide onRetry={retry} />
+      </Container>
+    );
+  }
+
+  if (status === 'checking') {
+    return (
+      <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <Box textAlign="center" py={8}>
+          <CircularProgress size={60} />
+          <Typography variant="h6" sx={{ mt: 2 }}>
+            Checking database connection...
+          </Typography>
+        </Box>
+      </Container>
+    );
+  }
+
+  const features = [
+    {
+      icon: <ContactIcon fontSize="large" color="primary" />,
+      title: 'Contact Management',
+      description: 'Manage your contacts with detailed information, company details, and notes.',
+      link: '/contacts',
+      count: stats?.contacts || 0,
+      color: 'primary',
+    },
+    {
+      icon: <TaskIcon fontSize="large" color="secondary" />,
+      title: 'Task Management',
+      description: 'Track tasks with priorities, status workflows, and team assignments.',
+      link: '/tasks',
+      count: stats?.tasks || 0,
+      color: 'secondary',
+    },
+    {
+      icon: <ProjectIcon fontSize="large" color="success" />,
+      title: 'Project Management',
+      description: 'Organize projects with team members, timelines, and progress tracking.',
+      link: '/projects',
+      count: stats?.projects || 0,
+      color: 'success',
+    },
+  ];
+
+  const techFeatures = [
+    {
+      icon: <CodeIcon />,
+      title: 'Modern Stack',
+      description:
+        'React 19, Vite 7, Express 5, PostgreSQL, and Prisma 7 with the latest best practices.',
+    },
+    {
+      icon: <RocketIcon />,
+      title: 'Developer Experience',
+      description:
+        'Hot reload, ESLint, Prettier, comprehensive scripts, and structured architecture.',
+    },
+    {
+      icon: <SecurityIcon />,
+      title: 'Production Ready',
+      description:
+        'Security middleware, input validation, error handling, and deployment configurations.',
+    },
+  ];
+
+  return (
+    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+      {/* Hero Section */}
+      <Box textAlign="center" mb={6}>
+        <Typography variant="h2" component="h1" gutterBottom>
+          Modern Full-Stack Template
+        </Typography>
+        <Typography variant="h5" color="text.secondary" paragraph>
+          A production-ready project management system built with React, Express, and PostgreSQL
+        </Typography>
+
+        {stats && (stats.contacts > 0 || stats.tasks > 0 || stats.projects > 0) && (
+          <Alert severity="success" sx={{ mt: 2, mb: 2, maxWidth: 600, mx: 'auto' }}>
+            <Typography variant="body2">
+              🎉 Database is set up with sample data! Explore the features below.
+            </Typography>
+          </Alert>
+        )}
+
+        <Button
+          variant="contained"
+          size="large"
+          component={RouterLink}
+          to="/contacts"
+          sx={{
+            mt: 2,
+            mr: 2,
+            px: 4,
+            py: 1.5,
+            fontSize: '1.1rem',
+            fontWeight: 600,
+            textTransform: 'none',
+            boxShadow: 3,
+            '&:hover': {
+              boxShadow: 6,
+              transform: 'translateY(-2px)',
+            },
+            transition: 'all 0.2s ease-in-out',
+          }}
+        >
+          Explore Features
+        </Button>
+        <Button
+          variant="outlined"
+          size="large"
+          href="https://github.com/Avinava/simple-vite-react-express"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            mt: 2,
+            px: 4,
+            py: 1.5,
+            fontSize: '1.1rem',
+            fontWeight: 600,
+            textTransform: 'none',
+            borderWidth: 2,
+            '&:hover': {
+              borderWidth: 2,
+              transform: 'translateY(-2px)',
+            },
+            transition: 'all 0.2s ease-in-out',
+          }}
+        >
+          View on GitHub
+        </Button>
+      </Box>
+
+      {/* Feature Cards */}
+      <Typography variant="h4" component="h2" textAlign="center" gutterBottom mb={4}>
+        What's Included
+      </Typography>
+
+      <Grid container spacing={4} sx={{ mb: 6 }}>
+        {features.map((feature, index) => (
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
+            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>
+                <Box mb={2}>{feature.icon}</Box>
+                <Typography variant="h5" component="h3" gutterBottom>
+                  {feature.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" paragraph>
+                  {feature.description}
+                </Typography>
+                <Chip label={`${feature.count} items`} color={feature.color} size="small" />
+              </CardContent>
+              <CardActions sx={{ justifyContent: 'center', pb: 2 }}>
+                <Button
+                  component={RouterLink}
+                  to={feature.link}
+                  variant="contained"
+                  color={feature.color}
+                  size="medium"
+                  sx={{
+                    minWidth: 160,
+                    fontWeight: 600,
+                    textTransform: 'none',
+                    boxShadow: 2,
+                    '&:hover': {
+                      boxShadow: 4,
+                      transform: 'translateY(-1px)',
+                    },
+                    transition: 'all 0.2s ease-in-out',
+                  }}
+                >
+                  Explore {feature.title}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Technical Features */}
+      <Typography variant="h4" component="h2" textAlign="center" gutterBottom mb={4}>
+        Technical Features
+      </Typography>
+
+      <Grid container spacing={4} sx={{ mb: 6 }}>
+        {techFeatures.map((feature, index) => (
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Box display="flex" alignItems="center" mb={2}>
+                  {feature.icon}
+                  <Typography variant="h6" component="h3" ml={1}>
+                    {feature.title}
+                  </Typography>
+                </Box>
+                <Typography variant="body2" color="text.secondary">
+                  {feature.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+
+export default Home;

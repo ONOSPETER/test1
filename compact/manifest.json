@@ -1,0 +1,134 @@
+{
+  "v": 1,
+  "app": {
+    "id": "test1-ca4354",
+    "name": "test1"
+  },
+  "mode": "http",
+  "createdAt": "2026-11-11T01:05:54.822Z",
+  "crypto": {
+    "kex": "x25519+ml-kem-768",
+    "sig": "ml-dsa-65",
+    "aead": "aes-256-gcm",
+    "kdf": "hkdf-sha256"
+  },
+  "critical": {
+    "treeHash": "6d620fde10b54eea750ab80e4dfc5b6d4b0bcbe721e61aca3361a765e46e6ba2",
+    "files": [
+      {
+        "path": "package.json",
+        "sha256": "f60d5e958e3753f493de05d386c06e6bcea4b73c973d686552aca3b29ad4256a",
+        "size": 590
+      },
+      {
+        "path": "prisma/schema.prisma",
+        "sha256": "eb1a0dc8e62d95742d03d849ccea8991bfa689540c98234d32719c7e5a3407e4",
+        "size": 1819
+      },
+      {
+        "path": "prisma/seed.js",
+        "sha256": "61eef54de93fd9211efce533009823a3f6a212f6dae54e9e2b55b391c2be2a97",
+        "size": 7293
+      },
+      {
+        "path": "prisma.config.ts",
+        "sha256": "df1a8eab7307410ecca3fd5d8020c57155524370a1f5865a67ffc9ffad3dcc28",
+        "size": 870
+      },
+      {
+        "path": "scripts/setup.js",
+        "sha256": "36ae33c93976e8c72303d123554afbf47eaf3156bfc1d94d9498d8ea39b2d15e",
+        "size": 3769
+      },
+      {
+        "path": "src/server/__tests__/error.test.js",
+        "sha256": "ba27472406162c96a122daaf967dacef57d611b01c0b7f15257dd16b50c5f4ae",
+        "size": 1928
+      },
+      {
+        "path": "src/server/config/index.js",
+        "sha256": "6152fe3f1f6fb7f8acff1163269b02c52759672f829eae82c70377624a6578b2",
+        "size": 2623
+      },
+      {
+        "path": "src/server/index.js",
+        "sha256": "d9a3f554f94b08106c88cccddfda126c266487b9c17e6065b1d5959c77b57612",
+        "size": 4558
+      },
+      {
+        "path": "src/server/middleware/error.js",
+        "sha256": "4c7dace8e6c64e2192c4109cfa6e732e04460738435b20ee20e331ec670fa1d9",
+        "size": 1732
+      },
+      {
+        "path": "src/server/middleware/security.js",
+        "sha256": "63890a1045a0ac7e8eb988ed71e3391f6a9130a813686b5d2fe4b72a4060373a",
+        "size": 1275
+      },
+      {
+        "path": "src/server/routes/v1/contact.route.js",
+        "sha256": "1effeafc63959a3a35896e71e0d49dbd55bb6a8a40d44acfad810cc3564f0759",
+        "size": 2092
+      },
+      {
+        "path": "src/server/routes/v1/index.js",
+        "sha256": "a21a0cd49f3b3b209adeead99af34ac334588c12e36a1ed5cbaa347d3305642a",
+        "size": 1006
+      },
+      {
+        "path": "src/server/routes/v1/project.route.js",
+        "sha256": "bc651a8878e1b3545c83c36b290545c1962a7f7894f6018a3392252c2bad00a1",
+        "size": 3886
+      },
+      {
+        "path": "src/server/routes/v1/task.route.js",
+        "sha256": "47ce95f2d25d7022b84b64453e238608bae18b5fd547a94f79732120ab7ae251",
+        "size": 3636
+      },
+      {
+        "path": "src/server/services/contact.service.js",
+        "sha256": "11585d0753a9cd5a7afcf98c7b78578b19f8f4baf7075e7472c15993539ef0ef",
+        "size": 1607
+      },
+      {
+        "path": "src/server/services/database.js",
+        "sha256": "c11c1d21a217b5e68718ba92caa940b17c3e85503f54a4e0f88b87dbb576a090",
+        "size": 1446
+      },
+      {
+        "path": "src/server/services/project.service.js",
+        "sha256": "5622318227ce5831c64f198445bdeebd78c53272a1058cfce31201203157462c",
+        "size": 4816
+      },
+      {
+        "path": "src/server/services/task.service.js",
+        "sha256": "a813d34fdafdd7e98ead18184f518b1753c05347bacfe92366afe33f1ba1fced",
+        "size": 3494
+      },
+      {
+        "path": "src/server/utils/response.js",
+        "sha256": "1fb13425a8d36e0ca04c38d84e1570d51d840fea892afafe1dc70a9b1626f77a",
+        "size": 993
+      },
+      {
+        "path": "vite.config.js",
+        "sha256": "0c79345e50f13690dd719934c910ca7af5f87f59f51adc9410d953a29e263152",
+        "size": 831
+      }
+    ],
+    "entry": "src/server/index.js",
+    "http": {
+      "prefixes": [
+        "/api"
+      ],
+      "port": 3001
+    }
+  },
+  "portal": {
+    "treeHash": "6abc692ed5134a032767f7a30da9769b11ead2edf6f1469a08b40915adb13c76"
+  },
+  "runner": {
+    "kemPublic": "U0gsQXQ3Mfd2sVyBLMoJ8NurqGhVYSMk8RZm1mCKGsRjLueIkcWvCQZ2s9QjCKAgmduNwIKl76N9HdYLhKqiIKQlOLMbYgRPjDhKsiyoN3yvtQZcrqVO2gWdMOGhoqpWL7oAlySGQBhDnAJgO3pRHfEfZYqHnhxHNaCjMdxIcBkQ+/YfDqet4dR2cXiBEIRDekcZwAY/euQgFySXYthGSSMkNBtdGlK2E4mtRoaiPGifnxfIU1GEOZFVLtaQgNOk0OVnBsYEriZmPUQu3MFMpvGhK9uVFcMTOnrH0+if5aUHPhtkWhQN0kcEvkKPWMvNQjmEBQE3rqMbvWgkBDQI8MiZAemBzTAKHig0v1hhczB7XBE5qzs096mi6gYLI7oO7zCOSDiu6SeQd6M+vTCq3JVjgAQtvedK1IyhVcMkBLLMI7h2DVuzBdSadNlwpbagXouo1ZCm5mgMDrhSEdmJIrnOYbMu/OVJUAZ6hLGrqUUwhMAWXBQKXtkhF8Z/c9COJql24woRK2EWnPJUj2AkQKg/hYyWhpB5JTAJfhlfCqrAOxWRXNd/iqOap5aJh9NHB9y5HvU/6UlWg+cwB4KxwvQ3DjSS5YB/koTI8eFIVXCRbzeI9at4FIGPIiNCvlGsfIkwsRgnwDCp34WjFkSLzoq801xC8XZGhVNBTMxTG3wrLPIITgFC9ch9XgbO3nNHeYUF1SJv1+cf2dQ4X2p8nNkO7Jh9MDmtDhAt3kYimVLCBsRhDOSOM+zFGYJMftYco9Kglrx8XHg3VjU9HKdPQVQ3DwJjoQp9enZje5OUKxkeKYYIPvzKvXmenkuU0ZS3WaJDDSK6cVNZ9DOhcVRjDYUh7glGkhYtrbU8X4iQ2eJdYmuMdfYXT8m2OSiTL3gzhSVtd3k1H7WWxTq87FWyS9cKYivLR1dgj2mCX8oFUZmUBnijWahHVNtjE/KZC+cbbXBp98jPknoT8nW3hDRj/KA98mse5Ay0hguOekC9/YGoaLxVoGPDL9cZW4DM2toE/sKS3mus6lATPog7qCB7fJqgVLM4ywxszYCMDpdTk9m6zuHGNNGsg/Ief4sClGG9iepHD7VFT4xynvzEMoNehePKl8HE/JqW3pyZbJqQ59jFdbRmvipeyxRiiEisfIAIVNh8WhXCqqpgoIOIr4cj6EoxmXtPlxkGx8l3WUyyfwSoenE3j3qrOJSLFai+1kEO5TuFsSzCfGm8qmkpUrlv/fM/FIahq5omidGIcGGCzBJs37SmXuHA07VH4PF8gGVBNftxuNHPGuTMo9auAsBUc1hC5YpJ2ydCScM/f7xj8XVftkysy9yi7FpZ8eIVTmR+aZme6FF4f8iaeCA93pnGc5gsmKzATuSOobjLjWeqZeMjhAiUAbHOg1EA51RjYxOkNRCJR2xSv7B5ymXB2VFz0qe0+0Uvvop7ksut7TtzZPeIybhN1uFo6TypDdFgenhbXGGrCKEgsvlan8KK90fOf0WQkuJP7dG37qQeb+uZUAV1PpWAW1SvM6t2TSaCSgCi5oEAnEQn+WKH90sIhT+eXipihu4OS/MT2j+7Mxoh6uM=",
+    "dsaPublic": "vYMCpBCBvqPIDbthtI8ovcCD+Uwqm/jFzhslwDYPOXIRFCZKjluZOWGP5OS0aCNS6pSUI70nQ4qo37ZY8gYqYt7W3RCnB/6Tu3/FFcQNyH3fAne847VC3jk/gY/cpXAegylM0wCiEAHs1ySmkbP9s4UwgmLPsFNj0fLzufa2FHQS5geaYzi9+MypDxK+r1XfCSh91NRG60nCL267rtr/Xmkn8BqiYpcbdnUoiLIZgxOvAFDy8ZB243T+7VrPNux2cK3vD+2FJl9s4ET9uVcgKzRw5iY470rcIbzJlQyk1/MM3bR2AEeJhzc0UpR/YclLQ44zlLcgRZrco2ubSJ1if7td8a9Gp3URcWl6+jUOTKAAkhv/hTuylmHtIP5auFuejmY5KRaPwutSg6CMUcxJ0douAKZHfQMOXkC2ePqYEG5uJTdXcSvn1xSnLpIFvrQwwlyKWW3/U6Z1oYKh1lmRv7J2QTd9K/5bq2YHCoOs0CA4VmCghpQVLPOp/Xdph1YsBfYOIdBP54GTMgWn7H1eSGU4RDm8LWCsQmDCYmJYxBUtng5IgH7yw2j9+IDalAQOP0oqllKXCm3O2zk2PpaGcyG+GwMwx0FZqG+EiCBemRlbtFgUX/jFwyU8QHekV/XTFNh2a/j66LwRGcZtjVUNoZ+dUPvnsnC5tkGQCdrhy4eAyMOCCO+lMb7BFjFFrGWVTpaMovb7xJKfYG1RRwS9s6BpYA6QkLUPgqafdH0yFeWm9qyQKTeLfo41tLlskHLdZXttgRzUhLRyv8kMO/vOIcIJ/PloEf6QPIzifrVLGctiyv/8vF4JV/XChdCZK7RPl4loUzrkiMCADL5jbIGvOr/U2KV/nvGr5s3YDW1Iy4UZ3KWNrXko4VihRi/Vq7sxAlPuxG+Ajd/vfQmGGwDN+fYHzGCzaQBsmcFkcGJhiF0QAPhA+FOAVWc2TOdQKCW2HAWcSNhRanDv6qVxxeocDc5WCAQV+oa6BXKQK7U2ezhbqHBE2TbaMBvlLW31Bnk7Uyi0m8r68vfsOITBKjjl9pcNvbZkmGl+ZE78ONdzvFQE4GWFMzCTTrk1gSqmeYXxPmwEpaHxaLGQmJAXCeBktl+Q5y6gq9Qo6G/7y6VCBAd0gt8ZpPao4QlR46Rw1WeghaLKDlcw8xJPLFwmMSgPESSQ4aY30P7PXhVvZ7ELtJ9IVnl/NLgntFHXd+M98zEFtAB0IRABSP18csCk7SdmVjp3sS88yJiPxLXk0GWCkxV8ULQSOzhawJEtkn8x3iOm3lwpwY81HTl/Wqt4VE+8j7FaBJo3Aae6EHqZDoZQ97YSH0OrZc0PogAtgrRWFeZQLEKYliKPEQ8RmWeS1G950AFFSDRIIoJZPdxyQZaHVesNxU/Qs5l0ei0Ybxz98jQwwONoFqae6SZktUXddpEkp8bsTFbX5VaE81U8NhAdVcosgWRz3GyRd9qbJ783nJxEc6phxtlMeOVsfzWb0aTnfuzhMy7u0awjACiV4NY3H9cYrNbMwRtFWon3Xpa+dcN7JBFmmEE51S52pcQE2xm5AXoQV51tDyZagRN8pLTQwCnO4n/3H/fK1qy6X8mjWDSIwzWkIYh6cbeYDu1ERVc/ptnNnzKoup94lFKIgt2t56xnEx7jM/ON63XBW/8g44OsdnPrAr+KpOETIev0tgHccM6pj4mLO9Erl37riKLNYM0p0ufF8W8hCtqdMoXwIHe2zqhdry3Ww4sbIsO8ipmFN8YTF/g7TzPKx09Zy/7QinbHD+xfeNC4X02ZLFM/bNlIQWvEw7Mhv6DaAEFEA5bp3bCMbpHzWbUsgEFtT6+LrjeyBk1E4IVxIHBH/aqA8fSUdmSypThgz3r5qjE39J1SY2uPaKUBye3Ih/LpiVzUit9//DkqFQu2WvWAzXEJpRwj1UyoXsC/VVZCT4ClbAzhGbrwnOIn+QckS2EGUwO1BJjypc3FU3bGL0j6CPBuieOw/hthBfS6sy2cx61eSDYLRPGzte2CbbW7WKLtBzFiM7PTmk0xIEwIzvN1BIX5p73GyXEmS+FvsYJvWmy2fJL/f5OtkTPovdw/UxW1M9q3ceufvWN//Rdu73K8wdzaZEutH/JEYe0sdS9r7MHILBHWmVhqhAfzeJ55qFcALdiW1I9B58oGk+ReDb9i5jM5pTf2RFAuKBH656RHc10Q2JPBZBNlAVyJx6tcfeZ35ItaXXH0VW5WLyhqx7+ZsijTKadAxEvHMy54YLsRSShmlHm7oTZDWXpm7WaCnC5WgnR20uyeY+sOLtzPLPAFqPga9Pi2U+wl9s+/PlVJqJE4fI5BwMNB5JSNo5I15JSCro3kU3VW/+hkESUSOONTYlNSwjF4nUiCHLvQhlRIl035jpxKT3bgGN9K3mVzxw6Rs9CaSlSLbd8JK6sMWpiX3dQtGrpcZmB38kaZgJbxZr0wCY26DgM5/oT0QBCORbJwchozQAoLBtMrpgb6kWazynfv8VNeNMyhsKwnjYHA1xp6aoEXNEJ7d18Wibq17hd2DVA8FMWMkZH2J+iF+HyXuZxLPxMp0whN77iGt+/2CQP2G2o8L/BewFtV8c8tJsT6H4beTv4="
+  }
+}

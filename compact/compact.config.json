@@ -1,0 +1,22 @@
+{
+  "v": 1,
+  "appId": "test1-ca4354",
+  "name": "test1",
+  "mode": "http",
+  "entry": "src/server/index.js",
+  "port": 3001,
+  "proxyPrefixes": [
+    "/api"
+  ],
+  "runnerPort": 8787,
+  "source": {
+    "type": "github",
+    "owner": "avinava",
+    "repo": "simple-vite-react-express",
+    "branch": "master",
+    "sha": "d2a3e7451a83817430730d95edc7dd73bbc9b895",
+    "subdir": null,
+    "url": "https://github.com/avinava/simple-vite-react-express"
+  },
+  "createdAt": "2026-11-11T01:05:54.822Z"
+}

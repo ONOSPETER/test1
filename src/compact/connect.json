@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "appId": "test1-ca4354",
+  "mode": "http",
+  "manifestSha256": "eb5f3eedf6afe89b5a6f9ef3e4b6d7edf33bd34c2caf020144c7b9790a3e5cf4",
+  "endpoint": "auto",
+  "verify": "strict",
+  "near": {
+    "network": "testnet",
+    "rpcUrls": [
+      "https://test.rpc.fastnear.com",
+      "https://rpc.testnet.near.org"
+    ],
+    "registryAccount": "710e3263748d594c2c1edc57c3ef40c2151a728a46d7453709ecc2d2c0d5467c"
+  },
+  "proxyPrefixes": [
+    "/api"
+  ],
+  "layout": "vercel"
+}
